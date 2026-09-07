@@ -10,14 +10,14 @@ Solutions are automatically synced using [LeetSync](https://github.com/LeetSync/
 
 <!-- STATS_START -->
 
-|  Difficulty  | Problems Solved |
-| :----------: | :-------------: |
-|    🟢 Easy   |        0        |
-|   🟡 Medium  |        0        |
-|    🔴 Hard   |        0        |
-| **📚 Total** |      **0**      |
+| Difficulty | Problems Solved |
+|:----------:|:---------------:|
+| 🟢 Easy | 14 |
+| 🟡 Medium | 1 |
+| 🔴 Hard | 0 |
+| **📚 Total** | **15** |
 
-**Last Updated:** Not yet updated
+**Last Updated:** September 7, 2026 at 10:18 PM IST
 
 <!-- STATS_END -->
 
