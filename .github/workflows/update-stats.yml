@@ -1,0 +1,74 @@
+name: Update LeetCode Stats
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Count problems and update README
+        run: |
+          easy=$(grep -rl "Difficulty-Easy" --include="README.md" . \
+            --exclude-dir=".git" | grep -v "^./README.md$" | wc -l)
+
+          medium=$(grep -rl "Difficulty-Medium" --include="README.md" . \
+            --exclude-dir=".git" | grep -v "^./README.md$" | wc -l)
+
+          hard=$(grep -rl "Difficulty-Hard" --include="README.md" . \
+            --exclude-dir=".git" | grep -v "^./README.md$" | wc -l)
+
+          total=$((easy + medium + hard))
+
+          updated=$(TZ='Asia/Kolkata' date +"%B %-d, %Y at %I:%M %p IST")
+
+          stats="| Difficulty | Problems Solved |
+          |:----------:|:---------------:|
+          | 🟢 Easy | $easy |
+          | 🟡 Medium | $medium |
+          | 🔴 Hard | $hard |
+          | **📚 Total** | **$total** |
+
+          **Last Updated:** $updated"
+
+          python3 - <<EOF
+          import re
+
+          with open("README.md", "r") as file:
+              content = file.read()
+
+          stats = """$stats"""
+
+          content = re.sub(
+              r'<!-- STATS_START -->.*?<!-- STATS_END -->',
+              '<!-- STATS_START -->\n\n' + stats + '\n\n<!-- STATS_END -->',
+              content,
+              flags=re.DOTALL
+          )
+
+          with open("README.md", "w") as file:
+              file.write(content)
+          EOF
+
+      - name: Commit updated stats
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update LeetCode stats [skip ci]"
+            git push
+          fi
