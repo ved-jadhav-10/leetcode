@@ -12,12 +12,12 @@ Solutions are automatically synced using [LeetSync](https://github.com/LeetSync/
 
 | Difficulty | Problems Solved |
 |:----------:|:---------------:|
-| 🟢 Easy | 19 |
+| 🟢 Easy | 20 |
 | 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
-| **📚 Total** | **21** |
+| **📚 Total** | **22** |
 
-**Last Updated:** September 13, 2026 at 06:36 PM IST
+**Last Updated:** September 13, 2026 at 07:30 PM IST
 
 <!-- STATS_END -->
 
