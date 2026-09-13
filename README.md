@@ -13,11 +13,11 @@ Solutions are automatically synced using [LeetSync](https://github.com/LeetSync/
 | Difficulty | Problems Solved |
 |:----------:|:---------------:|
 | 🟢 Easy | 19 |
-| 🟡 Medium | 1 |
+| 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
-| **📚 Total** | **20** |
+| **📚 Total** | **21** |
 
-**Last Updated:** September 13, 2026 at 05:23 PM IST
+**Last Updated:** September 13, 2026 at 06:35 PM IST
 
 <!-- STATS_END -->
 
