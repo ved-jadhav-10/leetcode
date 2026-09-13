@@ -2,7 +2,7 @@ class Solution {
 public:
     int reverse(int x) 
     {
-        long long result = 0;
+        long result = 0;
 
         while (x != 0)
         {
@@ -11,7 +11,7 @@ public:
 
             result = result * 10 + digit;
 
-            if (-2147483648LL <= result && result <= 2147483647LL)
+            if (-2147483648 <= result && result <= 2147483647)
             {
                 // still within int range
             }
