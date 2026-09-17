@@ -3,11 +3,11 @@ public:
     int mySqrt(int x) 
     {
         int ans = 0;
-        if (x == 1)
+        if (x == 0 || x == 1)
         {
-            ans = 1;
+            return x;
         }
-        for (int i = 1; i < x; i++)
+        for (int i = 1; i < (x/2)+1; i++)
         {
             if ((long long)i * i <= x)
             {
