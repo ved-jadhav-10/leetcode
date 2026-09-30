@@ -6,7 +6,7 @@ Solutions are automatically synced using [LeetSync](https://github.com/LeetSync/
 
 ---
 
-## 📊 Progress
+## 📊 Progress so far
 
 <!-- STATS_START -->
 
